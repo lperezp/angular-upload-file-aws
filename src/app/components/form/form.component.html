@@ -1,0 +1,33 @@
+<!-- INITIAL CARD -->
+<div class="w-xl rounded overflow-hidden shadow-lg mt-4 p-5">
+  <!-- INITIAL FORM -->
+  <form class="w-full max-w-sm mx-auto">
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-3/3">
+          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="file" (change)="selectFile($event)">
+        </div>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/1">
+          <button type="button" [disabled]="!selectedFiles" class="shadow bg-purple-500 text-white font-bold py-2 px-4 rounded" (click)="upload()">
+            Upload file
+          </button>
+        </div>
+      </div>
+    </form>
+    <div id="message" class="mx-auto justify-center m-5">
+      <div *ngIf="status == 2" class="bg-red-100 border w-1/4 mx-auto border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <p><strong class="font-bold">(*_*)</strong></p>
+        <span class="block sm:inline">There was an error uploading your file.</span>
+      </div>
+      <div *ngIf="status == 1" class="bg-green-100 border w-1/4 mx-auto border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <p><strong class="font-bold">*\0/*</strong></p>
+        <span class="block sm:inline">Successfully uploaded file.</span>
+      </div>
+      <div *ngIf="message" class="bg-blue-100  w-1/4 mx-auto border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
+          <p class="font-bold">{{ message }}</p>
+        </div>
+    </div>
+  <!-- END FORM -->
+</div>
+<!-- END CARD -->
