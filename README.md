@@ -54,4 +54,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Source
 
-[Guía] (https://grokonez.com/aws/angular-4-amazon-s3-example-how-to-upload-file-to-s3-bucket)
+Revisar esta [guía](https://grokonez.com/aws/angular-4-amazon-s3-example-how-to-upload-file-to-s3-bucket)
